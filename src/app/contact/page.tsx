@@ -23,20 +23,20 @@ const ContactPage: React.FC = () => {
             </div>
             <div className={styles.contactRight}>
                 <h2>Contact Form</h2>
-                <form>
+                <form className={styles.contactForm}>
                     <div className={styles.formGroup}>
-                        <label htmlFor="fullName">Name</label>
-                        <input type="text" id="fullName" name="fullName" required />
+                        <label className={styles.contactLabel} htmlFor="fullName">Name</label>
+                        <input className={styles.contactInput} type="text" id="fullName" name="fullName" required />
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" required />
+                        <label className={styles.contactLabel} htmlFor="email">Email</label>
+                        <input className={styles.contactInput} type="email" id="email" name="email" required />
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" name="message" rows={4} required></textarea>
+                        <label className={styles.contactLabel} htmlFor="message">Message</label>
+                        <textarea className={styles.contactTextArea} id="message" name="message" rows={4} required></textarea>
                     </div>
-                    <button type="submit">Send</button>
+                    <button className={styles.contactButton} type="submit">Send</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,23 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Google Cloud
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        project_id: weighty-arcadia-448817-j0
+        credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+    - name: Deploy to Google Cloud App Engine
+      run: gcloud app deploy

@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   return (
       <div className={styles.hero}>
           <div className={styles.overlay}>
-              <h1>Hello, I&apos;m Mehmet</h1>
+              <h1 className={styles.headingOne}>Hello, I&apos;m Mehmet</h1>
               <div className={styles.rotatingText}>
                   {rotatingTexts.map((text, index) => (
                       <span

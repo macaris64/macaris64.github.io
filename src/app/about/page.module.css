@@ -27,11 +27,11 @@
   font-size: 1rem;
 }
 
-:global(a) {
+.linkHref {
   color: #0077b5;
   text-decoration: none;
 }
 
-a:hover {
+.linkHref:hover {
   text-decoration: underline;
 }
