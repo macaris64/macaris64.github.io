@@ -20,7 +20,8 @@ jobs:
         credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
     - name: Write GCP credentials to file
-      run: echo "${{ secrets.GCP_CREDENTIALS }}" > ${HOME}/gcloud-key.json
+      run: |
+        printf "%s" "${{ secrets.GCP_CREDENTIALS }}" > ${HOME}/gcloud-key.json
 
     - name: Authenticate with Google Cloud
       run: gcloud auth activate-service-account --key-file=${HOME}/gcloud-key.json
