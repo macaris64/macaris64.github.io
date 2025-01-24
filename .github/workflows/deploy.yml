@@ -19,9 +19,12 @@ jobs:
         project_id: weighty-arcadia-448817-j0
         credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-    - name: Write GCP credentials to file
+    - name: Install jq
+      run: sudo apt-get install jq
+
+    - name: Write GCP credentials to file using jq
       run: |
-        echo "${{ secrets.GCP_CREDENTIALS }}" | sed 's/\\n/\n/g' > $HOME/gcloud-key.json
+        echo "${{ secrets.GCP_CREDENTIALS }}" | jq . > $HOME/gcloud-key.json
 
     - name: Authenticate with Google Cloud
       run: gcloud auth activate-service-account --key-file=$HOME/gcloud-key.json
