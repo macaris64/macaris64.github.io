@@ -19,5 +19,8 @@ jobs:
         project_id: weighty-arcadia-448817-j0
         credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
+    - name: Authenticate with Google Cloud
+      run: gcloud auth activate-service-account --key-file=${{ secrets.GCP_CREDENTIALS }}
+
     - name: Deploy to Google Cloud App Engine
-      run: gcloud app deploy
+      run: gcloud app deploy --quiet
