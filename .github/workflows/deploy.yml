@@ -21,7 +21,7 @@ jobs:
 
     - name: Write GCP credentials to file correctly
       run: |
-        printf "%s" "${{ secrets.GCP_CREDENTIALS }}" > $HOME/gcloud-key.json
+        echo "${{ secrets.GCP_CREDENTIALS }}" | sed "s/'/\\\\\'/g"` > $HOME/gcloud-key.json
         cat $HOME/gcloud-key.json
 
     - name: Authenticate with Google Cloud
