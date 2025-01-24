@@ -1,0 +1,37 @@
+.aboutContainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.aboutSection {
+  margin-bottom: 40px;
+}
+
+.aboutSection h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.experienceItem, .educationItem, .certificationItem {
+  margin-bottom: 20px;
+}
+
+.experienceItem h3, .educationItem h3, .certificationItem h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.experienceItem p, .educationItem p, .certificationItem p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+:global(a) {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

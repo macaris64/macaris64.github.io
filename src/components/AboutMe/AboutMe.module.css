@@ -1,0 +1,44 @@
+.aboutContainer {
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutSection {
+  margin-bottom: 40px;
+}
+
+.aboutSection h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.aboutSection p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialMedia a {
+  color: #0077b5;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.socialMedia a:hover {
+  transform: scale(1.2);
+}
+
+.socialMedia svg {
+  color: #333;
+}

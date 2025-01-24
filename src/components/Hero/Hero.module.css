@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../../public/images/space-bg.jpg') no-repeat center center/cover;
+  overflow: hidden;
+  color: white;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+:global(h1) {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.rotatingText {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(50%);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff6347;
+}
+
+.scrollDown {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  color: white;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

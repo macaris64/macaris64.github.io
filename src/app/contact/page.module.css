@@ -1,0 +1,101 @@
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.contactLeft {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.contactLeft h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contactLeft p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.socialMedia {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.socialMedia a {
+  color: #0077b5;
+  transition: transform 0.3s ease;
+}
+
+.socialMedia a:hover {
+  transform: scale(1.2);
+}
+
+.contactRight {
+  flex: 2;
+  min-width: 400px;
+}
+
+.contactRight h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+:global(form) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+:global(label) {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+:global(input), :global(textarea) {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+:global(button) {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f8d;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactLeft, .contactRight {
+    max-width: 100%;
+  }
+
+  .socialMedia {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,65 @@
+.card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardLeft {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.cardImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cardRight {
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.certificateIssuer {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.certificateDate {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.certificateDescription {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.certificateLink {
+  font-size: 1rem;
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.certificateLink:hover {
+  text-decoration: underline;
+}

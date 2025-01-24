@@ -1,0 +1,50 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.about,
+.projects,
+.contact {
+  margin: 40px 0;
+}
+
+.projects .projectList {
+  display: flex;
+  gap: 20px;
+}
+
+.projects .project {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.socials a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #0070f3;
+}
