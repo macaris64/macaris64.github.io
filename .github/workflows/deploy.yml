@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Google Cloud
+    - name: Set up Google Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
         project_id: weighty-arcadia-448817-j0
@@ -21,10 +21,11 @@ jobs:
 
     - name: Write GCP credentials to file
       run: |
-        echo "${{ secrets.GCP_CREDENTIALS }}" | base64 -d > ${HOME}/gcloud-key.json
+        echo "${{ secrets.GCP_CREDENTIALS }}" > $HOME/gcloud-key.json
+        cat $HOME/gcloud-key.json
 
     - name: Authenticate with Google Cloud
-      run: gcloud auth activate-service-account --key-file=${HOME}/gcloud-key.json
+      run: gcloud auth activate-service-account --key-file=$HOME/gcloud-key.json
 
     - name: Deploy to Google Cloud App Engine
       run: gcloud app deploy --quiet
